@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static%}
+
+
+
+{% block content %}
+<section> 
+    <div id="view-style">
+        <p class="title" >Total Books in Library</p>  
+        {% if books %}
+            <table>
+                <thead>
+                    <th> Book Id</th>
+                    <th> TITLE</th>
+                    <th> AUTHOR</th>
+                    <th> STATUS</th>
+                </thead>
+                {% for book in books %}
+                    <tr>
+                        <td>{{book.bookid}}</td>
+                        <td>{{book.booktitle}}</td>
+                        <td>{{book.bookauth}}</td>
+                        <td>{{book.bookaval}}</td>
+                    </tr>
+                {% endfor%}
+            </table>
+        {% endif %}
+    </div>
+</section>
+{% endblock content %}

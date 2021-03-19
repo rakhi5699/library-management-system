@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static%}
+
+
+
+
+{% block content %}
+<section>
+    <div id="form-add">
+        <p class="title" >Delete a Book </p>
+    <form action="{% url 'delete' %}" method="post">
+        {% csrf_token %}
+        
+        
+        <label> BOOK ID </label><br>
+        <input type="text" placeholder="BOOK ID" id="bookid" name="bookid_delete" required><br><br><br><br>
+        
+        <input type="submit" value="DELETE" id="submit"><br>
+    
+
+    </form>
+    <div align="center">
+        {% if msg%}
+            <span  style="color: red; font-size:20px;">{{msg}}</span>
+        {% endif %}
+    </div>
+    </div>
+</section>
+
+{% endblock content %}

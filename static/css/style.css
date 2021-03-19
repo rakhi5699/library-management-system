@@ -1,0 +1,119 @@
+section{
+    height: 100%;
+    width: 100%;  
+    background-image: url('https://wallpaperaccess.com/full/124408.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Work Sans', sans-serif; 
+    position: fixed;
+    
+}
+
+
+a:hover,button:hover {
+    color: whitesmoke;
+}
+
+#logo{
+    height: 50px;
+    width: 60px;
+}
+
+#index-entry{
+    animation: type 3s steps(19);
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 100px;
+    margin-left: 5%;
+    font-family: Algerian;
+    margin-top: 10%;
+    color: brown;
+
+}
+@keyframes type{
+    0%{
+        width: 0ch;
+    }
+    100%{
+        width: 19ch;
+    }
+}
+#index-entry-name{
+    animation: type 8s steps(19);
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 40px;
+    margin-left: 40%;
+    font-family: Algerian;
+    color: brown;
+
+}
+@keyframes type{
+    0%{
+        width: 0ch;
+    }
+    100%{
+        width: 19ch;
+    }  
+}
+
+#form-add{
+    color: rgb(240, 231, 231);
+    height: 510px;
+    width: 800px;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;  
+    margin-left: 20%;
+    background-color: rgb(0,0,0,0.4);
+    box-shadow: 2px solid rgba(214, 74, 74, 0.5);
+    
+} 
+.title{
+    position: relative;
+    animation: type 3s steps(19);
+    color:rgb(231, 212, 245);
+    font-size: 40px;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 10%;
+    font-family: Verdana, sans-serif;
+    padding-top: 20px;
+    margin-left: 5%;
+    
+    
+}
+@keyframes type{
+    0%{
+        width: 0ch;
+    }
+    100%{
+        width: 19ch;
+    }
+} 
+label{
+    font-family: Verdana, sans-serif;
+    margin-left: 10%;
+    font-size: 20px;
+}
+#bookid,#booktitle,#bookauth,#bookissuedDate,#bookaval{
+    background-color: rgb(0,0,0,0.5);
+    border-radius: 10px;
+    width: 80%;
+    margin-left: 10%;
+    color: rgb(231, 212, 245);
+    box-shadow: 200px solid rgb(8, 8, 8);
+    padding: 5px;
+}
+
+#submit{
+    background-color: red;
+    margin-left: 45%;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    box-shadow: 200px solid rgb(8, 8, 8);
+}
+#message{
+    font-size: 20px;
+    color: red;
+}

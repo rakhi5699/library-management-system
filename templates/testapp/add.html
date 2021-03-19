@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static%}
+
+
+{% block content %}
+<section>
+<div id="form-add">
+    <p class="title" >Add a  Book </p>
+    <form action="{% url 'add' %}" method="post">
+    {% csrf_token %}
+    
+   
+    
+    <label> BOOK ID </label><br>
+    <input type="text" placeholder="BOOK ID" id="bookid" name="bookid" required><br><br>
+    <label> BOOK TITLE </label><br>
+    <input type="text" placeholder="BOOK TITLE" id="booktitle" name="booktitle" required><br><br>
+    <label> BOOK AUTHOR </label><br>
+    <input type="text" placeholder="BOOK AUTHOR" id="bookauth" name="bookauth" required><br><br>
+
+    <label>AVAILABLE</label> &nbsp;
+    <input type="radio" id="available" name="bookaval" value="available" checked><br>
+    <label> ISSUED </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="radio" id="issued" name="bookaval" value="issued" ><br>
+    <input type="submit" value="    ADD    " id="submit"><br>
+ 
+    
+</form>
+<div  align="center">
+    {% if msg%} 
+    <span id="message" style="color:rgb(238, 14, 14); font-size:20px;">{{msg}}</span> 
+    {% endif %}
+</div>
+</div>
+
+</section>
+{% endblock content %}

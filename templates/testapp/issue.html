@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static%}
+
+
+
+{% block content %}
+
+
+<section>
+    <div id="form-add">
+        <p class="title" >Issuing book </p>
+    <form action = "{% url 'issue'%}" method="post">
+        {% csrf_token %}
+        
+       
+     
+        <label> BOOK ID </label><br>
+        <input type="text"  id="bookid" placeholder="BOOK ID" name = "bookid" required><br><br>
+        <label> STUDENT NAME </label><br>
+        <input type="text" placeholder="STUDENT NAME" id="booktitle" name="std" required><br><br>
+        <label> DATE </label><br>
+        <input type="date" placeholder="ISSUED DATE" id="bookissuedDate" name="bookissuedDate" required><br><br>
+        <input type="submit" value="    ISSUE   " id="submit">
+    </form>
+    <div align="center">
+        {% if msg %}
+            <span  style="color: red; font-size:20px;">{{msg}}</span>
+        {% endif %}
+    </div>
+    </div>
+   
+</section>
+
+{% endblock content %}
